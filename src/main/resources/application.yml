@@ -34,4 +34,8 @@ logging:
 
 interceptor:
   path:
-    action: 
+    action:
+
+
+hello:
+  msg: hello-ajajaj

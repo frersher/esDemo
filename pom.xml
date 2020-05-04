@@ -231,6 +231,12 @@
             <artifactId>elasticsearch</artifactId>
             <version>2.4.6</version>
         </dependency>
+
+		<dependency>
+			<groupId>com.cbtest</groupId>
+			<artifactId>springbootjdbc</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
