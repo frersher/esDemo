@@ -12,11 +12,11 @@ CREATE TABLE `read_books` (
   `praise_rate` int(11) DEFAULT NULL COMMENT 'praise_rate',
   `page_count` int(11) DEFAULT '0' COMMENT '总页数',
   `price` int(11) DEFAULT NULL COMMENT '价格',
-  `isbn` int(11) DEFAULT '0' COMMENT 'isbn',
+  `isbn` varchar(20) DEFAULT '0' COMMENT 'isbn',
   `reader_number` int(11) DEFAULT NULL COMMENT 'reader_number',
-  `recommend_number` int(11) DEFAULT NULL COMMENT 'recommend_number',
-  `book_size` int(11) DEFAULT NULL COMMENT '氪金状态，【0：氪金新增、1：氪金消费】',
-  `discription` varchar(128) DEFAULT '' COMMENT 'discription',
+  `recommend_number` int(11) unsigned zerofill DEFAULT NULL COMMENT 'recommend_number',
+  `book_size` int(11) DEFAULT NULL COMMENT 'book_size',
+  `discription` text COMMENT 'discription',
   `create_tch_id` int(11) DEFAULT NULL COMMENT 'create_tch_id',
   `state` int(11) DEFAULT NULL COMMENT 'state',
   `is_delete` int(11) DEFAULT NULL COMMENT 'is_delete',
@@ -26,7 +26,7 @@ CREATE TABLE `read_books` (
   `update_time` date DEFAULT NULL COMMENT 'update_time',
   `publishdate` varbinary(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8mb4 COMMENT='用户氪金信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='read_books';
 
 INSERT INTO `read_books` (`id`, `name`, `language`, `type`, `level`, `author`, `imgurl`, `score`, `publisher`, `word_count`, `praise_rate`, `page_count`, `price`, `isbn`, `reader_number`, `recommend_number`, `book_size`, `discription`, `create_tch_id`, `state`, `is_delete`, `creator`, `create_time`, `updator`, `update_time`) VALUES (1, '出走的泰奥', 1, 37, 4, '彼特·赫尔特林', 'img', 6, '二十一世纪出版社', 78000, 73.00, 127, 8.80, '9787539137827', '0', '0', NULL, '《出走的泰奥》内容简介：泰奥因为受不了家里吵吵闹闹的气氛，出走了……他在汽车的肚子底下和树林中吓人的小木房里过夜，认识了慈爱的咹咹老爸、好心的货车司机，也遭遇了犯罪团伙……最后终于懂得了葡萄酒并不全是甜的，生活尤其是这样的道理。\n家里吵吵闹闹的气氛真让泰奥受不了，虽然他的老师佩尔希夫人能理解他，有心事他也能向天花板上的小人儿倾诉；可是，他还是决定离开这里所有的一切。他把书包往教室外的大柜子里一塞，出走了……\n他在汽车的肚子底下和树林中吓人的小木屋里过夜，他认识了慈爱的经营欢乐转盘的咹咹老爸、好心的货车司机凯玛尔，也被一个倒卖汽车的犯罪团伙幽禁在一个黑暗的阁楼上……所幸的是，这一切都如恶梦一般过去了，咹咹老爸的故事和他说的一句话却久久地留在了泰奥的心里——葡萄酒并不全是甜的，生活尤其是这样。', NULL, 0, 0, NULL, '2015-8-24 00:00:00', NULL, '2015-9-17 00:00:00');
 INSERT INTO `read_books` (`id`, `name`, `language`, `type`, `level`, `author`, `imgurl`, `score`, `publisher`, `word_count`, `praise_rate`, `page_count`, `price`, `isbn`, `reader_number`, `recommend_number`, `book_size`, `discription`, `create_tch_id`, `state`, `is_delete`, `creator`, `create_time`, `updator`, `update_time`) VALUES (2, '我的小小忧伤-这不公平！', 1, 37, 1, '爱格雷贝特', 'img', 2, '中国少年儿童出版社', 500, 57.00, 32, 9.00, '20855238-1', '0', '0', NULL, '在学校被同学嘲笑的日子真不好过，太可气了！这是孩子一个不能对家长说的小秘密！', NULL, 0, 0, NULL, '2015-8-24 00:00:00', NULL, '2015-9-17 00:00:00');
